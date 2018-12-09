@@ -104,9 +104,7 @@ public class BitInputStream extends InputStream {
 		if (numBits > INT_SIZE || numBits < 1) {
 			throw new RuntimeException("Illegal argument: numBits must be on [1, 32]");
 		}
-		
-		bitsRead += numBits;
-		
+
 		int value = 0;
 		
 		if (numBits > available) {
